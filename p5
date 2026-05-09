@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+class Demo {
+private:
+    int num;
+
+public:
+    // Default Constructor
+    Demo() {
+        num = 0;
+        cout << "Default Constructor Called. Num = " << num << endl;
+    }
+    // Parameterized Constructor
+    Demo(int n) {
+        num = n;
+        cout << "Parameterized Constructor Called. Num = " << num << endl;
+    }
+    // Copy Constructor
+    Demo(const Demo &obj) {
+        num = obj.num;
+        cout << "Copy Constructor Called. Num = " << num << endl;
+    }
+    // Overloaded Constructor
+    Demo(int a, int b) {
+        num = a + b;
+        cout << "Overloaded Constructor Called. Sum = " << num << endl;
+    }
+};
+int main() {
+    Demo d1;          // Default constructor
+    Demo d2(10);      // Parameterized constructor
+    Demo d3(d2);      // Copy constructor
+    Demo d4(20, 30);  // Overloaded constructor
+
+    return 0;
+}
