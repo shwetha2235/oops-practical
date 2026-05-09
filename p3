@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int calculate(int a, int b) {
+    return a + b;
+}
+int calculate(int l, int b, int type) {
+    return l * b;
+}
+int calculate(int side) {
+    return side * side * side;
+}
+int main() {
+    int a, b, side, l, br;
+    cout << "Enter two numbers for sum: ";
+    cin >> a >> b;
+    cout << "Sum = " << calculate(a, b) << endl;
+    cout << "Enter length and breadth of rectangle: ";
+    cin >> l >> br;
+    cout << "Area of Rectangle = " << calculate(l, br, 1) << endl;
+    cout << "Enter side of cube: ";
+    cin >> side;
+    cout << "Volume of Cube = " << calculate(side) << endl;
+    return 0;
+}
