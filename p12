@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int choice;
+    float amount, result;
+    do
+    {
+        cout<<"\n--- Currency Converter ---"<<endl;
+        cout<<"1. INR to USD"<<endl;
+        cout<<"2. USD to INR"<<endl;
+        cout<<"3. INR to EURO"<<endl;
+        cout<<"4. Exit"<<endl;
+        cout<<"Enter your choice: ";
+        cin>>choice;
+        switch(choice)
+        {
+            case 1:
+                cout<<"Enter amount in INR: ";
+                cin>>amount;
+                result = amount / 83;
+                cout<<"Converted amount in USD = "<<result<<endl;
+                break;
+            case 2:
+                cout<<"Enter amount in USD: ";
+                cin>>amount;
+                result = amount * 83;
+                cout<<"Converted amount in INR = "<<result<<endl;
+                break;
+            case 3:
+                cout<<"Enter amount in INR: ";
+                cin>>amount;
+                 result = amount / 90;
+                     cout<<"Converted amount in EURO = "<<result<<endl;
+                break;
+            case 4:
+                cout<<"Exiting program..."<<endl;
+                break;
+            default:
+                cout<<"Invalid Choice!"<<endl;
+        }
+    } while(choice != 4);
+    return 0;
+}
