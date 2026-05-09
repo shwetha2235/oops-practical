@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+// Engine class
+class Engine
+{
+    public:
+    void showEngine()
+    {
+        cout<<"Engine is running"<<endl;
+    }
+};
+class Car
+{
+    Engine e;   // containership
+    public:
+    void showCar()
+    {
+        cout<<"Car is starting"<<endl;
+        e.showEngine();
+    }
+};
+int main(){
+    Car c;
+    c.showCar();
+  return 0;
+}
